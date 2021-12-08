@@ -32,9 +32,6 @@ function App() {
 
   }, [])
 
-
-
-
   const setData = ({ name, login, followers, following, public_repos, avatar_url }) => {
     setName(name);
     setUserName(login);
@@ -47,7 +44,6 @@ function App() {
   const handleSearch = (e) => {
     setUserInput(e.target.value);
   }
-
 
   const handleSubmit = () => {
 
@@ -62,7 +58,6 @@ function App() {
           setError(null)
         }
       })
-
   };
 
   return (
@@ -77,24 +72,24 @@ function App() {
         <button onClick={handleSubmit}>Search</button>
 
       </div>
-      {loading && <h1 className="error">...Loading</h1>}
-      {fetchErr ? <h1 className="error">{fetchErr}</h1>
-        : error ? <h1 className="error">{error}</h1>
-          : <div className="items">
+      {loading ? <h1 className="error">...Loading</h1> :
+        fetchErr ? <h1 className="error">{fetchErr}</h1>
+          : error ? <h1 className="error">{error}</h1>
+            : <div className="items">
 
-            <img className="img" src={avatar} />
-            <div id="content">
-              <h3 className="name" name='user'>{name}</h3>
-              <div className="underline"></div>
-              <h3 className="usname" name='user'>{userName}</h3>
-              <div className="underline"></div>
-              <p className="followers" name='user'>{followers} Followers</p>
-              <div className="underline"></div>
-              <p className="repos" name='user'>{repos} Repos</p>
-              <div className="underline"></div>
-              <p className="following" name='user'>{following} Following</p>
+              <img className="img" src={avatar} />
+              <div id="content">
+                <h3 className="name" name='user'>{name}</h3>
+                <div className="underline"></div>
+                <h3 className="usname" name='user'>{userName}</h3>
+                <div className="underline"></div>
+                <p className="followers" name='user'>{followers} Followers</p>
+                <div className="underline"></div>
+                <p className="repos" name='user'>{repos} Repos</p>
+                <div className="underline"></div>
+                <p className="following" name='user'>{following} Following</p>
+              </div>
             </div>
-          </div>
       }
 
 
