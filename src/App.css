@@ -1,0 +1,57 @@
+.nav-bar{
+    padding: 25px;
+  background-color: rgb(235, 226, 214);
+}
+
+.searchArea{
+  padding-top: 80px;
+  text-align:center
+}
+
+.searchArea input,button{
+  font-size: 22px;
+  border-radius: 4px;
+}
+
+.items{
+  text-align: center;
+  border: 1px solid rgb(216, 215, 215);
+  width: fit-content;
+  margin:auto;
+  margin-top: 40px;
+  border-radius: 7px;
+}
+
+
+.items .img{
+  width: 100%;
+  text-align: center;
+}
+
+.underline{
+    width: 100%;
+    height: 0.1rem;
+    background: rgb(235 226 214);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loading{
+  padding: 50px;
+}
+
+.error{
+  text-align: center;
+  color: rgb(104, 104, 104);
+}
+
+@media only screen and (max-width: 500px) {
+  .items{
+    text-align: center;
+    border: 1px solid rgb(216, 215, 215);
+    width: 90%;
+    margin:auto;
+    margin-top: 40px;
+    border-radius: 7px;
+  }
+}
